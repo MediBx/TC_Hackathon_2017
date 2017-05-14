@@ -1,0 +1,7 @@
+project 'MediBox'
+workspace 'MediBox'
+use_frameworks!
+
+target 'MediBox' do
+	pod 'PubNub'
+end
