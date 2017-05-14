@@ -17,20 +17,19 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
-import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 /**
  * Created by nanxiao on 5/13/17.
  */
-public class ThingSpaceStreamer {
+public class ThingSpaceConnector {
     private final String url = "https://thingspace.io/get/dweets/for";
     private final int proxThreshold = 200;
     private final int timeThreshold = 10;
     private DateTimeFormatter dtFmt;
 
-    public ThingSpaceStreamer(){
+    public ThingSpaceConnector(){
         dtFmt = DateTimeFormatter.ISO_INSTANT;
     }
 
@@ -97,7 +96,7 @@ public class ThingSpaceStreamer {
     }
 
     public static void main(String[] args){
-        ThingSpaceStreamer s  = new ThingSpaceStreamer();
+        ThingSpaceConnector s  = new ThingSpaceConnector();
         List<TsDataPoint> tsDataPoints = s.getValidDataPoints("SKS7-a4c1");
 
         tsDataPoints.forEach(d -> {

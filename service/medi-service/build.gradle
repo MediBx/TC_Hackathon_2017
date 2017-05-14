@@ -34,6 +34,7 @@ dependencies {
     compile group: 'commons-pool', name: 'commons-pool', version: '1.6'
     compile group: 'org.json', name: 'json', version: '20160810'
     compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+    compile group: 'com.pubnub', name: 'pubnub-gson', version: '4.6.2'
 }
 
 applicationDistribution.from("src/main/resources/") {
