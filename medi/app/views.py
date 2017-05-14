@@ -27,7 +27,7 @@ def index():
 
 # create Admin
 admin = Admin(app, name='MediBoard', template_mode='bootstrap3')
-admin.add_view(Patient(name='My View', menu_icon_type='glyph', menu_icon_value='glyphicon-home'))
+admin.add_view(Patient(name='My Patients', menu_icon_type='glyph', menu_icon_value='glyphicon-user'))
 
 
 
