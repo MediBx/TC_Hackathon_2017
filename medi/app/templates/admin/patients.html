@@ -4,17 +4,31 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
-            <h1>My Patients</h1>
+            <h1>MediBox Patients</h1>
             <p class="lead">
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Firstname</th>
-                   
-                    <th>UUID</th>
+                    <th>Name</th>
+                    <th>Alert</th>
+                    <th>Adherence</th>
+                    <th>Behaviour</th>
+
                   </tr>
                 </thead>
               </table>
+              <div>
+          <form method="POST" role="form" class="form-horizontal">
+              <div class="form-group">
+                  <input type="text" class="form-control" name="number1" placeholder="Number1">
+              </div>
+
+              <div class="form-group">
+                  <input type="text" class="form-control" name="number2" placeholder="Number2">
+              </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+</div>
             </p>
         </div>
     </div>

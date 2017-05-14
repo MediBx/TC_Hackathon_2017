@@ -16,6 +16,10 @@ class Patient(BaseView):
   def index(self):
     return self.render('/admin/patients.html')
 
+class Logout(BaseView):
+  @expose('/')
+  def index(self):
+    return self.render('/admin/logout.html')
 
 app = Flask(__name__)
 
@@ -28,6 +32,7 @@ def index():
 # create Admin
 admin = Admin(app, name='MediBoard', template_mode='bootstrap3')
 admin.add_view(Patient(name='My Patients', menu_icon_type='glyph', menu_icon_value='glyphicon-user'))
+admin.add_view(Logout(name='Log Out', menu_icon_type='glyph', menu_icon_value='glyphicon-off'))
 
 
 
